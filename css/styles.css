@@ -9,9 +9,7 @@
     --second-logo-color:#000000;
     --icon-color:#afb1b8;
     --grid-item:3;
-}
-
-  *{outline: crimson solid 1px;}  
+}  
  
 /* reset styles */
 a{text-decoration: none;
@@ -112,17 +110,34 @@ body{
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  background-color: var(--primery-bg-color);
+  border-radius: 4px;
 }
 
 .button-off{
   position: absolute;
   right: 8px;
   top: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--primery-bg-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  
+}
+
+.button-off:hover,
+.button-off:focus{
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .backdrop.is-hidden{
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none; 
 }
 
 /* header */
@@ -152,7 +167,7 @@ body{
   color: var(--accent-color) ;
 }
 
-.contacts-head{
+.list-items .contacts-head{
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -166,7 +181,7 @@ body{
   color: var(--accent-color);
 }
 
-.nav-link,.contacts-head{  
+.nav-link{  
 display: block;
 }
 
@@ -503,4 +518,4 @@ height: 90px;
   display: block;
 }
 
-  
+  /* *{outline: crimson solid 1px;}  */
