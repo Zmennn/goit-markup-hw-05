@@ -10,7 +10,7 @@
     --icon-color:#afb1b8;
     --grid-item:3;
     --overlay-color:rgba(33, 150, 243, 0.9);
-    --time-duration: 1050ms;
+    --time-duration: 250ms;
     --transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }  
  
@@ -581,26 +581,36 @@ height: 90px;
 
 .nav-link,.contacts-head,.hero-button,
 .social-link,.regular-customers-icon-container
-,.footer-link,.portfolio-overlay,.portfolio-button{
+,.footer-link,.portfolio-overlay,.portfolio-button,.gallery-link{
   transition-duration: var(--time-duration);
   transition-timing-function: var(--transition-timing-function) ;
 }
 
-.social-link,.hero-button,.portfolio-button{
-  transition-property: background-color, fill;
+
+.nav-link,.contacts-head,.footer-link{
+  transition-property: color;
 }
 
-.nav-link,.contacts-head,.footer-link,.portfolio-button{
-  transition-property: color;
+.hero-button,.footer .social-link{
+  transition-property:background-color;
 }
 
 .regular-customers-icon-container{
   transition-property: border-color, color;
 }
 
-.gallery-link,.portfolio-button{
+.portfolio-button{
+  transition-property: box-shadow, background-color,color;
+}
+.gallery-link{
   transition-property: box-shadow;
 }
+
+.team .social-link{
+  transition-property:background-color, fill ;
+}
+
+
 
 
 
