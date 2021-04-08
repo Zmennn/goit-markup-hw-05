@@ -10,7 +10,7 @@
     --icon-color:#afb1b8;
     --grid-item:3;
     --overlay-color:rgba(33, 150, 243, 0.9);
-    --time-duration: 1050ms;
+    --time-duration: 250ms;
     --transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }  
  
@@ -149,6 +149,7 @@ body{
   opacity: 0;
   pointer-events: none; 
   visibility:hidden;
+  transform: scale(0.05) rotate(360deg);
 }
 
 /* header */
@@ -614,5 +615,5 @@ height: 90px;
 }
 
 .backdrop{
-  transition-property:opacity,visibility;
-}
+  transition-property:transform;
+  }
