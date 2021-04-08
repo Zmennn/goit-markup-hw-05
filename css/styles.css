@@ -558,7 +558,7 @@ height: 90px;
   right: 0;
   top: 0;
   bottom: 0;
-  transform: translateY(294px);
+  transform: translateY(100%);
   transition-property:transform ;
   padding-left: 24px;
   padding-right: 24px;
