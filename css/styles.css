@@ -10,7 +10,7 @@
     --icon-color:#afb1b8;
     --grid-item:3;
     --overlay-color:rgba(33, 150, 243, 0.9);
-    --time-duration: 250ms;
+    --time-duration: 1050ms;
     --transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }  
  
@@ -116,6 +116,7 @@ body{
   transform: translate(-50%,-50%);
   background-color: var(--primery-bg-color);
   border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .button-off{
@@ -124,14 +125,19 @@ body{
   top: 8px;
   width: 30px;
   height: 30px;
-  display: flex;
+   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   border-radius: 50%;
   cursor: pointer;
   background: var(--primery-bg-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  
+  }
+
+/* поправим кривой макет) */
+.icon-off{
+  position: relative;
+  top: 1px;
 }
 
 .button-off:hover,
@@ -281,9 +287,6 @@ header.section{padding: 0;}
 .footer .container{display: flex;}
 
 
-
-
-
 /* main pg index */
 /*     hero */
 .hero{
@@ -331,8 +334,6 @@ header.section{padding: 0;}
 .our-features-item{
   --grid-item:4
 }
-
-
 
 /* картинки через спрайт */
 .our-features-logo-container{
@@ -573,7 +574,8 @@ height: 90px;
   overflow: hidden;
 }
 
-.gallery-link:hover .portfolio-overlay{
+.gallery-link:hover .portfolio-overlay,
+.gallery-link:focus .portfolio-overlay{
   transform: translateY(0px);
 }
 
@@ -581,7 +583,8 @@ height: 90px;
 
 .nav-link,.contacts-head,.hero-button,
 .social-link,.regular-customers-icon-container
-,.footer-link,.portfolio-overlay,.portfolio-button,.gallery-link{
+,.footer-link,.portfolio-overlay,.portfolio-button,.gallery-link
+,.button-off,.backdrop{
   transition-duration: var(--time-duration);
   transition-timing-function: var(--transition-timing-function) ;
 }
@@ -602,7 +605,7 @@ height: 90px;
 .portfolio-button{
   transition-property: box-shadow, background-color,color;
 }
-.gallery-link{
+.gallery-link,.button-off{
   transition-property: box-shadow;
 }
 
@@ -610,8 +613,6 @@ height: 90px;
   transition-property:background-color, fill ;
 }
 
-
-
-
-
-  /* *{outline: crimson solid 1px;}  */
+.backdrop{
+  transition-property:opacity,visibility;
+}
