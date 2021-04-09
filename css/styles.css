@@ -157,11 +157,11 @@ body{
   opacity: 0;
   
   pointer-events: none; 
-  /* visibility:hidden; */
+   visibility:hidden; 
   transform: scale(0) rotate(180deg);
-  transition-property:opacity,transform ;
-  transition-delay: var(--time-duration), 0ms ;
-  transition-duration: 1ms,var(--time-duration);
+  transition-property:opacity,visibility,transform ;
+  transition-delay: var(--time-duration),var(--time-duration), 0ms ;
+  transition-duration: 1ms,1ms,var(--time-duration);
   
   
 }
